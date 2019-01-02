@@ -13,7 +13,7 @@ const todosReducer = (state = [], action) => {
     case GET_TODOS:
       return state;
     case GET_TODOS_SUCCESS:
-      return [...state, action.payload];
+      return [...state, ...action.payload];
     case GET_TODOS_FAIL:
       return state;
 
@@ -21,7 +21,7 @@ const todosReducer = (state = [], action) => {
       return state;
 
     case ADD_TODO_SUCCESS:
-      return [...state, action.payload];
+      return [...state, ...action.payload];
 
     case ADD_TODO_FAIL:
       return state;

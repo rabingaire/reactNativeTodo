@@ -1,11 +1,12 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import axios from "axios";
 import { GET_TODOS_SUCCESS, GET_TODOS_FAIL, GET_TODOS } from "./constants";
+import { todosUrl } from "./../../config/url";
 
 function fetchTodos() {
   return axios({
     method: "get",
-    url: "http://10.10.3.253:5000/todos"
+    url: todosUrl
   });
 }
 
